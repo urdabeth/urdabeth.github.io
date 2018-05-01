@@ -9,8 +9,10 @@
 	$(document).ready(function() {
 		var canvas = $('#canvas');
 		var ctx = canvas[0].getContext('2d');
+		console.log(ctx);
 		ctx.canvas.width = window.innerWidth;
 		ctx.canvas.height = window.innerHeight;
+		ctx.canvas.style = 'vertical-align: bottom;';
 		var count = 0;
 		var audio = new Audio('audio.wav');
 		var img = new Image();

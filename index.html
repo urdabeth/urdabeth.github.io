@@ -25,6 +25,9 @@
 				audio.play();
 				count = count + 1;
 				$('#count').html(count);
+				if (count == 23) {
+					$('#center').html('happy birthday, beth!');
+				}
 			});
 		};
 	});
@@ -55,10 +58,10 @@
 </head>
 <body>
 	<div class="header">
-		<span id="count">0</span>
+		you got <span id="count">0</span> happy birthdays.
 	</div>
 	<div class="center">
-		click.
+		click anywhere to get a happy birthday.
 	</div>
 	<canvas id="canvas">
 		this is not a canvas.

@@ -19,6 +19,7 @@ $(document).ready(function() {
             if (count == 23) {
                 $('#center').addClass('happy-birthday');
                 $('#center').html('happy birthday, beth!');
+                count = 0;
             }
         });
     };

@@ -36,17 +36,17 @@
 	html, body {
 		margin: 0;
 		padding: 0;
-		font-size: 1.4em;
+		font-size: 1.2em;
 		font-family: sans-serif;
 		font-weight: bold;
 	}
-	.header {
+	#header {
 		position: absolute;
 		top: 0.4em;
 		left: 0.4em;
 		z-index: 10;
 	}
-	.center {
+	#center {
 		position: absolute;
 		top: 50%;
 		left: 50%;
@@ -57,10 +57,10 @@
 
 </head>
 <body>
-	<div class="header">
+	<div id="header">
 		you got <span id="count">0</span> happy birthdays.
 	</div>
-	<div class="center">
+	<div id="center">
 		click anywhere to get a happy birthday.
 	</div>
 	<canvas id="canvas">

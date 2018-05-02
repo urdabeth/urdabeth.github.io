@@ -55,10 +55,17 @@
 		transform: translate(-50%, -50%);
 	}
 	.happy-birthday {
-		color: #f0f;
-		text-shadow: -2px 2px #ff0;
 		font-size: 1.6em;
 		font-weight: bold;
+		animation: blink 100ms infinite alternate;
+	}
+	@keyframes blink {
+		from {
+			color: #f0f;
+		}
+		to {
+			color: #ff0;
+		}
 	}
 	</style>
 

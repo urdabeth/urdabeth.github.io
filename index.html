@@ -5,70 +5,9 @@
 	<meta name="viewport" content="width=device-width">
 	<title>UR DA BETH</title>
 	<link rel="icon" href="image.png">
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-	<script type="text/javascript">
-	$(document).ready(function() {
-		var ctx =  $('#canvas')[0].getContext('2d');
-		ctx.canvas.width = window.innerWidth;
-		ctx.canvas.height = window.innerHeight;
-		ctx.canvas.style = 'vertical-align: bottom;';
-		var count = 0;
-		var audio = new Audio('audio.wav');
-		var img = new Image();
-		img.src = 'image.png';
-		img.onload = function() {
-			$('#canvas').on('click', function(e) {
-				var x = Math.round(e.offsetX - (img.width / 2));
-				var y = Math.round(e.offsetY - (img.height / 2));
-				ctx.drawImage(img, x, y);
-				audio.currentTime = 0;
-				audio.play();
-				count = count + 1;
-				$('#count').html(count);
-				if (count == 23) {
-					$('#center').addClass('happy-birthday');
-					$('#center').html('happy birthday, beth!');
-				}
-			});
-		};
-	});
-	</script>
-	<style>
-	html, body {
-		margin: 0;
-		padding: 0;
-		font-size: 1.2em;
-		font-family: sans-serif;
-		font-weight: bold;
-	}
-	#header {
-		position: absolute;
-		top: 0.4em;
-		left: 0.4em;
-		z-index: 10;
-	}
-	#center {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		z-index: 10;
-		transform: translate(-50%, -50%);
-	}
-	.happy-birthday {
-		font-size: 1.6em;
-		font-weight: bold;
-		animation: blink 100ms infinite alternate;
-	}
-	@keyframes blink {
-		from {
-			color: #f0f;
-		}
-		to {
-			color: #ff0;
-		}
-	}
-	</style>
-
+	<link rel="stylesheet" href="index.css">
+	<script src="jquery.js"></script>
+	<script src="index.js"></script>
 </head>
 <body>
 	<div id="header">

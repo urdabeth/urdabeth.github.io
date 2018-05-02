@@ -26,6 +26,7 @@
 				count = count + 1;
 				$('#count').html(count);
 				if (count == 23) {
+					$('#center').addClass('happy-birthday');
 					$('#center').html('happy birthday, beth!');
 				}
 			});
@@ -52,6 +53,11 @@
 		left: 50%;
 		z-index: 10;
 		transform: translate(-50%, -50%);
+	}
+	.happy-birthday {
+		color: #f0f;
+		text-shadow: -3px 3px #ff0;
+		font-size: 1.6em;
 	}
 	</style>
 

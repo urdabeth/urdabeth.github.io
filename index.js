@@ -16,13 +16,13 @@ $(document).ready(function() {
             audio.play();
             count = count + 1;
             $('#count').html(count);
-            if (count >= 50) {
+            if (count >= 23) {
                 $('#center').addClass('happiest-birthday');
                 $('#center').html('happiest birthday, beth!');
-            } else if (count >= 40) {
+            } else if (count >= 13) {
                 $('#center').addClass('happier-birthday');
                 $('#center').html('happier birthday, beth!');
-            } else if (count >= 23) {
+            } else if (count >= 3) {
                 $('#center').addClass('happy-birthday');
                 $('#center').html('happy birthday, beth!');
             }

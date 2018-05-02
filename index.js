@@ -15,12 +15,14 @@ $(document).ready(function() {
             audio.currentTime = 0;
             audio.play();
             count = count + 1;
-            $('#count').html(count);
             if (count == 23) {
                 $('#center').addClass('happy-birthday');
                 $('#center').html('happy birthday, beth!');
-                count = 0;
             }
+            if (count == 24) {
+                location.reload();
+            }
+            $('#count').html(count);
         });
     };
 });

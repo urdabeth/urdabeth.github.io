@@ -21,8 +21,9 @@ $(document).ready(function() {
             }
             if (count == 24) {
                 location.reload();
+            } else {
+                $('#count').html(count);
             }
-            $('#count').html(count);
         });
     };
 });

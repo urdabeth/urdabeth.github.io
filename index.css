@@ -17,6 +17,7 @@ html, body {
 	left: 50%;
 	z-index: 10;
 	transform: translate(-50%, -50%);
+	white-space: nowrap;
 }
 .happy-birthday {
 	font-size: 1.6em;

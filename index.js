@@ -21,7 +21,7 @@ $(document).ready(function() {
         var centerClass = '';
         var centerHtml = '';
 	if (count > 23) {
-	    // TODO: SHOW FINAL MESSAGE THEN RELOAD
+	    // TODO: SHOW FINAL MESSAGE THEN RELOAD OR STOP CANVAS ON CLICK AND DISPLAY RELOAD MESSAGE THEN RELOAD
 	    location.reload();
 	} else if (count > 22) {
             audio = audio3;

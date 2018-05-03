@@ -1,43 +1,54 @@
 html, body {
-    margin: 0;
-    padding: 0;
-    font-size: 1.2em;
-    font-family: sans-serif;
-    font-weight: bold;
+	margin: 0;
+	padding: 0;
+	font-size: 1.2em;
+	font-family: sans-serif;
+	font-weight: bold;
 }
 #header {
-    position: absolute;
-    top: 0.4em;
-    left: 0.4em;
-    z-index: 10;
+	position: absolute;
+	top: 0.4em;
+	left: 0.4em;
+	z-index: 10;
 }
 #center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 10;
-    transform: translate(-50%, -50%);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 10;
+	transform: translate(-50%, -50%);
 }
 .happy-birthday {
-    font-size: 1.6em;
-    font-weight: bold;
-    animation: blink 500ms infinite alternate;
+	font-size: 1.6em;
+	font-weight: bold;
+	animation: blink 500ms infinite alternate;
 }
 .happier-birthday {
-    font-size: 1.8em;
-    font-weight: bold;
-    animation: blink 300ms infinite alternate;
+	font-size: 1.8em;
+	font-weight: bold;
+	animation: blink 300ms infinite alternate;
 }
 .happiest-birthday {
-    font-size: 2em;
-    font-weight: bold;
-    animation: blink 100ms infinite alternate;
+	font-size: 2em;
+	font-weight: bold;
+	animation: blink 100ms infinite alternate;
 }
 @keyframes blink {
-    from {
-        color: #f0f;
-    }
-    to {
-        color: #ff0;
-    }
+	from {
+		color: #f0f;
+	}
+	to {
+		color: #ff0;
+	}
+}
+.hidden {
+	display: none;
+}
+.shown {
+	display: block;
+}
+a {
+	font-size: 0.6em;
+	color: #666;
+	text-decoration: none;
 }

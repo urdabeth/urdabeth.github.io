@@ -20,12 +20,15 @@ $(document).ready(function() {
         var image = new Image();
         var centerClass = '';
         var centerHtml = '';
-        if (count >= 23) {
+	if (count > 23) {
+	    // TODO: SHOW FINAL MESSAGE THEN RELOAD
+	    location.reload();
+	} else if (count > 22) {
             audio = audio3;
             image = image3;
             centerClass = 'happiest-birthday';
             centerHtml = 'happiest birthday, beth!';
-        } else if (count >= 13) {
+        } else if (count > 12) {
             audio = audio2;
             image = image2;
             centerClass = 'happier-birthday';

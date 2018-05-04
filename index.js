@@ -6,7 +6,7 @@ $(document).ready(function() {
 	var count = 0;
 	var message = ['happy birthday, beth!', 'happier birthday, beth!','happiest birthday, beth!'];
 	var messageClass = ['happy-birthday','happier-birthday', 'happiest-birthday'];
-	var reset = ['', '', 'click me to reset.'];
+	var reset = ['', '', 'click me to reset'];
 	var audio = new Audio('audio.wav');
 	var images = new Array();
 	images[0] = new Image();

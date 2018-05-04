@@ -4,9 +4,9 @@ $(document).ready(function() {
 	ctx.canvas.height = window.innerHeight;
 	ctx.canvas.style = 'vertical-align: bottom;';
 	var count = 0;
+	var reset = ['', '', 'click me to reset'];
 	var message = ['happy birthday, beth!', 'happier birthday, beth!','happiest birthday, beth!'];
 	var messageClass = ['happy-birthday','happier-birthday', 'happiest-birthday'];
-	var reset = ['', '', 'click me to reset'];
 	var audio = new Audio('audio.wav');
 	var images = new Array();
 	images[0] = new Image();
@@ -20,9 +20,9 @@ $(document).ready(function() {
 			count = count + 1;
 			$('#count').text(count);
 			var cat = Math.floor(count / (23 / 2));
+			$('#reset').text(reset[cat]);
 			$('#message').text(message[cat]);
 			$('#message').attr('class', messageClass[cat]);
-			$('#reset').text(reset[cat]);
 			audio.currentTime = 0;
 			audio.play();
 			var random = Math.floor(Math.random() * 3);

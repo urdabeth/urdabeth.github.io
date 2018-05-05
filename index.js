@@ -11,7 +11,7 @@ greetings[0] = 'happy bark day!';
 greetings[1] = 'i wuff you!';
 greetings[2] = 'stay pawesome!';
 greetings[3] = 'wow!';
-greetings[4] = 'such birthday!';
+greetings[4] = 'such bday!';
 greetings[5] = 'very celebrate!';
 greetings[6] = 'so cake!';
 greetings[7] = 'much age!';
@@ -41,25 +41,28 @@ $(document).ready(function() {
 			ctx.drawImage(image, x, y);
 			
 			if (count > 22) {
-				$('#message').html('a vv happy bday to u, beth!');
-				$('#header').attr('class', 'make-it-blink');
+				//$('#message').html('a vv happy bday to u, beth!');
+				//$('#header').attr('class', 'make-it-blink');
 				
 				$('#footer').css('cursor', 'pointer');
 				$('#footer').on('click', function() {
 					location.reload();
 				});
-				$('#instruction').html('click me to reset');				
+				$('#instruction').html('click me to reset');	
+
+				$('#message').attr('class', '');	
+				$('#greeting').attr('class', 'hidden');		
 			} else {
 				var random = 0;
 				while (random == previous) {
 					random = Math.floor(Math.random() * greetings.length);
 				}
-				$('#message').html(greetings[random]);
+				$('#greeting').html(greetings[random]);
 				previous = random;
 			}
 			
-			$('#message').animate({fontSize:'1.6em'}, 50);
-			$('#message').animate({fontSize:'1.4em'}, 50);
+			$('#greeting').animate({fontSize:'40px'}, 50);
+			$('#greeting').animate({fontSize:'32px'}, 50);
 		}
 	});
 });

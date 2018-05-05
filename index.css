@@ -12,7 +12,7 @@ html, body {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-color: #C3E1D9;
-	color: #000;
+	color: #9400D3;
 }
 #header {
 	position: absolute;
@@ -30,7 +30,6 @@ html, body {
 #instruction {
 	font-size: 0.8em;
 	display: block;
-	opacity: 0.8;
 }
 a {
 	color: inherit;
@@ -41,9 +40,9 @@ a {
 }
 @keyframes blink {
 	from {
-		color: #ff6;
+		color: #1B7742;
 	}
 	to {
-		color: #f6f;
+		color: #9400D3;
 	}
 }

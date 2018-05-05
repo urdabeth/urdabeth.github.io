@@ -7,14 +7,14 @@ images[1].src = 'image2.png';
 images[2] = new Image();
 images[2].src = 'image3.png';
 const greetings = new Array();
-greetings[0] = 'happy bark day';
-greetings[1] = 'i wuff you';
-greetings[2] = 'stay pawesome';
-greetings[3] = 'wow';
-greetings[4] = 'such birthday';
-greetings[5] = 'very celebrate';
-greetings[6] = 'so cake';
-greetings[7] = 'much age';
+greetings[0] = 'happy bark day!';
+greetings[1] = 'i wuff you!';
+greetings[2] = 'stay pawesome!';
+greetings[3] = 'wow!';
+greetings[4] = 'such birthday!';
+greetings[5] = 'very celebrate!';
+greetings[6] = 'so cake!';
+greetings[7] = 'much age!';
 	
 $(document).ready(function() {
 	var count = 0;

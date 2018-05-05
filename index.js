@@ -47,8 +47,8 @@ $(document).ready(function() {
 				$('#message').html(greetings[Math.floor(Math.random() * greetings.length)]);
 			}
 			
-			$('#message').animate({fontSize:'1.6em'}, 100);
-			$('#message').animate({fontSize:'1.4em'}, 100);
+			$('#message').animate({fontSize:'1.6em'}, 50);
+			$('#message').animate({fontSize:'1.4em'}, 50);
 		}
 	});
 });

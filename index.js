@@ -6,10 +6,18 @@ images[1] = new Image();
 images[1].src = 'image2.png';
 images[2] = new Image();
 images[2].src = 'image3.png';
+// TODO: ADD RANDOM GREETINGS
 const greetings = new Array();
-greetings[0] = 'Happy Birthday, Beth!';
-greetings[1] = 'Happier Birthday, Beth!';
-greetings[2] = 'Happiest Birthday, Beth!';
+greetings[0] = '生日快乐';
+greetings[1] = '¡Feliz cumpleaños!';
+greetings[2] = 'Happy Birthday!';
+greetings[3] = 'जन्मदिन मुबारक हो';
+greetings[4] = 'كل عام و أنت بخير';
+greetings[5] = 'Feliz aniversário!';
+greetings[6] = 'শুভ জন্মদিন।';
+greetings[7] = 'С днём рождения!';
+greetings[8] = 'お誕生日おめでとうございます';
+greetings[9] = 'ਜਨਮ ਦਿਨ ਮੁਬਾਰਕ।';
 	
 $(document).ready(function() {
 	var count = 0;
@@ -24,21 +32,6 @@ $(document).ready(function() {
 			count = count + 1;
 			$('#count').text(count);		
 			
-			if (count > 22) {
-				$('#instruction').html('<a href=".">Click here to reset.</a>');
-				$('#message').html(greetings[2]);
-				$('#message').attr('class', 'happiest-birthday');
-			} else if (count > 12) {
-				$('#message').html(greetings[1]);
-				$('#message').attr('class', 'happier-birthday');
-			} else {
-				$('#message').html(greetings[0]);
-				$('#message').attr('class', 'happy-birthday');
-			}
-			
-			// TODO: ADD RANDOM GREETINGS
-			//$('#message').html(greetings[Math.floor(Math.random() * greetings.length)]);
-			
 			audio.currentTime = 0;
 			audio.play();
 			
@@ -46,6 +39,16 @@ $(document).ready(function() {
 			var x = Math.round(e.offsetX - (image.width / 2));
 			var y = Math.round(e.offsetY - (image.height / 2));
 			ctx.drawImage(image, x, y);
+			
+			if (count > 22) {
+				$('#instruction').html('<a href=".">Click here to reset.</a>');
+				$('#message').html('INSERT ULTIMATE GREETING HERE');
+			} else {
+				$('#message').html(greetings[Math.floor(Math.random() * greetings.length)]);
+			}
+			
+			$('#message').animate({fontSize:'1.6em'}, 100);
+			$('#message').animate({fontSize:'1.4em'}, 100);
 		}
 	});
 });

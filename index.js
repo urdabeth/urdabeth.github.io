@@ -42,7 +42,12 @@ $(document).ready(function() {
 			if (count > 22) {
 				$('#message').html('a vv happy bday to u, beth!');
 				$('#header').attr('class', 'make-it-blink');
-				$('#instruction').html('<a href=".">click me to reset</a>');
+				
+				$('#footer').css('cursor', 'pointer');
+				$('#footer').on('click', function() {
+					location.reload();
+				});
+				$('#instruction').html('click me to reset');				
 			} else {
 				$('#message').html(greetings[Math.floor(Math.random() * greetings.length)]);
 			}

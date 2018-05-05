@@ -6,6 +6,10 @@ images[1] = new Image();
 images[1].src = 'image2.png';
 images[2] = new Image();
 images[2].src = 'image3.png';
+const greetings = new Array();
+greetings[0] = 'Happy Birthday, Beth!';
+greetings[1] = 'Happier Birthday, Beth!';
+greetings[2] = 'Happiest Birthday, Beth!';
 	
 $(document).ready(function() {
 	var count = 0;
@@ -21,22 +25,24 @@ $(document).ready(function() {
 			$('#count').text(count);		
 			
 			if (count > 22) {
-				$('#instruction').html('<a href=".">Click here to reset</a>');
-				$('#message').html('Happiest birthday, beth!');
+				$('#instruction').html('<a href=".">Click here to reset.</a>');
+				$('#message').html(greetings[2]);
 				$('#message').attr('class', 'happiest-birthday');
 			} else if (count > 12) {
-				$('#message').html('Happier birthday, beth!');
+				$('#message').html(greetings[1]);
 				$('#message').attr('class', 'happier-birthday');
 			} else {
-				$('#message').html('Happy birthday, beth!');
+				$('#message').html(greetings[0]);
 				$('#message').attr('class', 'happy-birthday');
 			}
+			
+			// TODO: ADD RANDOM GREETINGS
+			//$('#message').html(greetings[Math.floor(Math.random() * greetings.length)]);
 			
 			audio.currentTime = 0;
 			audio.play();
 			
-			var random = Math.floor(Math.random() * 3);
-			var image = images[random];
+			var image = images[Math.floor(Math.random() * images.length)];
 			var x = Math.round(e.offsetX - (image.width / 2));
 			var y = Math.round(e.offsetY - (image.height / 2));
 			ctx.drawImage(image, x, y);

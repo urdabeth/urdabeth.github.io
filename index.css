@@ -2,28 +2,24 @@ html, body {
 	margin: 0;
 	padding: 0;
 	font-size: 1em;
-	font-family: 'Oswald', sans-serif;
+	font-family: 'Varela Round', sans-serif;
 }
 #header {
 	position: absolute;
 	top: 0.4em;
 	left: 0.4em;
 	z-index: 10;
-	text-transform: uppercase;
 }
 #footer {
 	position: absolute;
 	bottom: 0.4em;
 	left: 0.4em;
 	z-index: 10;
-	text-transform: uppercase;
 }
 #instruction {
-	font-size: 0.6em;
+	font-size: 0.8em;
 	color: #666;
-	text-decoration: none;
 	display: block;
-	text-transform: lowercase;
 }
 a {
 	color: #666;

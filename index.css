@@ -5,20 +5,20 @@
 html, body {
 	margin: 0;
 	padding: 0;
-	font-size: 16px;
+	font-size: 18px;
 	font-family: Varela, sans-serif;
 	background-image: url(background.jpg);
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
+	background-color: #C3E1D9;
+	color: #000;
 }
 #header {
 	position: absolute;
 	top: 0.4em;
 	left: 0.4em;
 	z-index: 10;
-	color: #ff6;
-	text-shadow: 0px 3px 5px #f6f;
 	font-size: 1.4em;
 }
 #footer {
@@ -26,12 +26,11 @@ html, body {
 	bottom: 0.4em;
 	left: 0.4em;
 	z-index: 10;
-	color: #ff0;
-	text-shadow: 0px 2px 3px #f0f;
 }
 #instruction {
 	font-size: 0.8em;
 	display: block;
+	opacity: 0.8;
 }
 a {
 	color: inherit;

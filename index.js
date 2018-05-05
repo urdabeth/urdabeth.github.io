@@ -8,16 +8,9 @@ images[2] = new Image();
 images[2].src = 'image3.png';
 // TODO: ADD RANDOM GREETINGS
 const greetings = new Array();
-greetings[0] = '生日快乐';
-greetings[1] = '¡Feliz cumpleaños!';
+greetings[0] = 'Happy Birthday!';
+greetings[1] = 'Happy Birthday!';
 greetings[2] = 'Happy Birthday!';
-greetings[3] = 'जन्मदिन मुबारक हो';
-greetings[4] = 'كل عام و أنت بخير';
-greetings[5] = 'Feliz aniversário!';
-greetings[6] = 'শুভ জন্মদিন।';
-greetings[7] = 'С днём рождения!';
-greetings[8] = 'お誕生日おめでとうございます';
-greetings[9] = 'ਜਨਮ ਦਿਨ ਮੁਬਾਰਕ।';
 	
 $(document).ready(function() {
 	var count = 0;

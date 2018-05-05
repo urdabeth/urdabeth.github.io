@@ -41,17 +41,14 @@ $(document).ready(function() {
 			ctx.drawImage(image, x, y);
 			
 			if (count > 22) {
-				//$('#message').html('a vv happy bday to u, beth!');
-				//$('#header').attr('class', 'make-it-blink');
-				
+				$('#message').attr('class', '');	
+				$('#greeting').attr('class', 'hidden');	
+
 				$('#footer').css('cursor', 'pointer');
 				$('#footer').on('click', function() {
 					location.reload();
 				});
-				$('#instruction').html('click me to reset');	
-
-				$('#message').attr('class', '');	
-				$('#greeting').attr('class', 'hidden');		
+				$('#instruction').html('click me to reset');		
 			} else {
 				var random = 0;
 				while (random == previous) {
@@ -61,7 +58,7 @@ $(document).ready(function() {
 				previous = random;
 			}
 			
-			$('#greeting').animate({fontSize:'40px'}, 50);
+			$('#greeting').animate({fontSize:'34px'}, 50);
 			$('#greeting').animate({fontSize:'32px'}, 50);
 		}
 	});

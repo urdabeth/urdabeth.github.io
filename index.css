@@ -27,9 +27,6 @@ html, body {
 	font-size: 40px;
 	animation: blink 100ms infinite alternate;
 }
-.hidden {
-	display: none;
-}
 #footer {
 	margin: auto;
 	width: 100%;
@@ -42,8 +39,8 @@ html, body {
 	font-size: 12px;
 	display: block;
 }
-.make-it-blink {
-	animation: blink 100ms infinite alternate;
+.hidden {
+	display: none;
 }
 @keyframes blink {
 	from {

@@ -1,8 +1,18 @@
+@font-face {
+	font-family: Varela;
+	src: url(varela.ttf);
+}
 html, body {
 	margin: 0;
 	padding: 0;
-	font-size: 1em;
-	font-family: 'Varela Round', sans-serif;
+	font-size: 16px;
+	font-family: Varela, sans-serif;
+	background-image: url(background.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	color: #fff;
+	text-shadow: 0px 0px 3px #000;
 }
 #header {
 	position: absolute;
@@ -18,11 +28,10 @@ html, body {
 }
 #instruction {
 	font-size: 0.8em;
-	color: #666;
 	display: block;
 }
 a {
-	color: #666;
+	color: #fff;
 	text-decoration: none;
 }
 .happy-birthday {
@@ -39,9 +48,9 @@ a {
 }
 @keyframes blink {
 	from {
-		color: #3EB27B;
+		text-shadow: 0px 0px 5px #3EB27B;
 	}
 	to {
-		color: #DB8CFF;
+		text-shadow: 0px 0px 5px #DB8CFF;
 	}
 }

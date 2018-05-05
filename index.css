@@ -5,6 +5,7 @@
 html, body {
 	margin: 0;
 	padding: 0;
+	text-align: center;
 	font-size: 18px;
 	font-family: Varela, sans-serif;
 	background-image: url(background.jpg);
@@ -15,21 +16,21 @@ html, body {
 	color: #9400D3;
 }
 #header {
+	margin: auto;
+	width: 100%;
 	position: absolute;
 	top: 2em;
 	z-index: 10;
-	margin: auto;
-	width: 100%;
-	text-align: center;
 	font-size: 1.4em;
+	word-wrap: break-word;
+	word-break: break-all;
 }
 #footer {
+	margin: auto;
+	width: 100%;
 	position: absolute;
 	bottom: 1em;
 	z-index: 10;
-	margin: auto;
-	width: 100%;
-	text-align: center;
 }
 #instruction {
 	font-size: 0.8em;

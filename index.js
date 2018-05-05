@@ -18,6 +18,7 @@ greetings[7] = 'much age!';
 	
 $(document).ready(function() {
 	var count = 0;
+	var previous = 0;
 	
 	var ctx =  $('#canvas')[0].getContext('2d');
 	ctx.canvas.width = window.innerWidth;
@@ -49,7 +50,12 @@ $(document).ready(function() {
 				});
 				$('#instruction').html('click me to reset');				
 			} else {
-				$('#message').html(greetings[Math.floor(Math.random() * greetings.length)]);
+				var random = 0;
+				while (random == previous) {
+					random = Math.floor(Math.random() * greetings.length);
+				}
+				$('#message').html(greetings[random]);
+				previous = random;
 			}
 			
 			$('#message').animate({fontSize:'1.6em'}, 50);

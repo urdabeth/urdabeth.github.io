@@ -6,11 +6,15 @@ images[1] = new Image();
 images[1].src = 'image2.png';
 images[2] = new Image();
 images[2].src = 'image3.png';
-// TODO: ADD RANDOM GREETINGS
 const greetings = new Array();
-greetings[0] = 'Happy Birthday!';
-greetings[1] = 'Happy Birthday!';
-greetings[2] = 'Happy Birthday!';
+greetings[0] = 'happy bark day';
+greetings[1] = 'i wuff you';
+greetings[2] = 'stay pawesome';
+greetings[3] = 'wow';
+greetings[4] = 'such birthday';
+greetings[5] = 'very celebrate';
+greetings[6] = 'so cake';
+greetings[7] = 'much age';
 	
 $(document).ready(function() {
 	var count = 0;
@@ -23,7 +27,9 @@ $(document).ready(function() {
 	$('#canvas').on('click', function(e) {
 		if (count < 23) {
 			count = count + 1;
-			$('#count').text(count);		
+			$('#count').text(count);	
+
+			$('#emote').text('yay! ');
 			
 			audio.currentTime = 0;
 			audio.play();
@@ -34,8 +40,9 @@ $(document).ready(function() {
 			ctx.drawImage(image, x, y);
 			
 			if (count > 22) {
-				$('#instruction').html('<a href=".">Click here to reset.</a>');
-				$('#message').html('INSERT ULTIMATE GREETING HERE');
+				$('#message').html('a vv happy bday to u, beth!');
+				$('#header').attr('class', 'make-it-blink');
+				$('#instruction').html('<a href=".">click me to reset</a>');
 			} else {
 				$('#message').html(greetings[Math.floor(Math.random() * greetings.length)]);
 			}

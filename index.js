@@ -4,8 +4,8 @@ $(document).ready(function() {
 	ctx.canvas.height = window.innerHeight;
 	ctx.canvas.style = 'vertical-align: bottom;';
 	var count = 0;
-	var reset = ['', '', 'click me to reset'];
-	var message = ['happy birthday, beth!', 'happier birthday, beth!','happiest birthday, beth!'];
+	var reset = ['', '', 'Click me to reset'];
+	var message = ['Happy Birthday, Beth!', 'Happier Birthday, Beth!','Happiest Birthday, Beth!'];
 	var messageClass = ['happy-birthday','happier-birthday', 'happiest-birthday'];
 	var audio = new Audio('audio.wav');
 	var images = new Array();
@@ -19,6 +19,7 @@ $(document).ready(function() {
 		if (count < 23) {
 			count = count + 1;
 			$('#count').text(count);
+			document.title = 'urdabeth (' + count + ')';
 			var cat = Math.floor(count / (23 / 2));
 			$('#reset').text(reset[cat]);
 			$('#message').text(message[cat]);

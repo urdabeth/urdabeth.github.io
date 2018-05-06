@@ -3,6 +3,7 @@ html, body {
 	padding: 0;
 	font-family: sans-serif;
 	background-color: #fff;
+	background: #c3e1d9 url(../assets/images/background.jpg) center / cover no-repeat fixed;
 	color: #333;
 }
 .center {
@@ -29,13 +30,12 @@ html, body {
 	font-size: 20px;
 	position: relative;
 	background: white;
-	border: 1px solid black;
+	//border: 1px solid black;
     max-width: 200px;
     padding: 10px;
     margin: 0 auto;
-    border-radius:5px;
-	display:none;
-    
+    border-radius: 30px;
+	//display:none;    
 }
 .bubble:after,
 .bubble:before {
@@ -54,7 +54,7 @@ html, body {
 	margin-left: -10px;
 }
 .bubble:before {
-	border-color: black transparent transparent black;
+	border-color: white transparent transparent white;
 	border-width: 11px;
 	margin-left: -11px;
 }

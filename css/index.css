@@ -3,7 +3,6 @@ html, body {
 	padding: 0;
 	font-family: sans-serif;
 	background-color: #fff;
-	background: #c3e1d9 url(../assets/images/background.jpg) center / cover no-repeat fixed;
 	color: #333;
 }
 .center {
@@ -21,6 +20,14 @@ html, body {
 	text-transform: uppercase;
 	font-weight: 700;
 	font-size: 32px;
+	border: 1px solid black;
+	display: inline-block;
+	border-radius: 5px;
+}
+.message:hover {
+	border-color: #4cd5ab;
+	color: #4cd5ab;
+	cursor: pointer;
 }
 .media {
 	padding: 10px;
@@ -30,16 +37,15 @@ html, body {
 	font-size: 20px;
 	position: relative;
 	background: white;
-	//border: 1px solid black;
+	border: 1px solid black;
     max-width: 200px;
     padding: 10px;
     margin: 0 auto;
-    border-radius: 30px;
-	//display:none;    
+    border-radius: 5px; 
 }
 .bubble:after,
 .bubble:before {
-	left: 80%;
+	left: 70%;
 	top: 100%;
 	border: solid white;
 	content: '';
@@ -54,7 +60,7 @@ html, body {
 	margin-left: -10px;
 }
 .bubble:before {
-	border-color: white transparent transparent white;
+	border-color: black transparent transparent black;
 	border-width: 11px;
 	margin-left: -11px;
 }

@@ -23,27 +23,14 @@ greetings[8] = 'much age';
 greetings[9] = 'ur a v v good one';
 $(document).ready(function() {
 	var index = 0;
-	var interval;
-	setIntervalImages();
-	$('.center').on('click', function() {
+	$('.message').on('click', function() {
 		audio.currentTime = 0;
-		audio.play();		
-		clearInterval(interval);
-		$('#greeting').text(greetings[index - 1]);
-		$('.bubble').slideDown(500, function() {
-			setTimeout(function() {
-				$('.bubble').slideUp(500);				
-				setIntervalImages();
-			}, 1000)
+		audio.play();	
+		$('.media').fadeOut(300, function() {
+			$('#greeting').text(greetings[index]);
+			$('#image').attr('src', images[index]);
+			index = (index == 9) ? 0 : (index + 1);
+			$('.media').fadeIn(300);
 		});
-	})
-	function setIntervalImages() {
-		interval = setInterval(function() {
-			changeImages();
-		}, 1000);
-	}
-	function changeImages() {
-		$('#image').attr('src', images[index]);	
-		index = (index == 9) ? 0 : (index + 1);
-	}
+	});
 });

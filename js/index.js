@@ -20,7 +20,7 @@ greetings[5] = 'such bday';
 greetings[6] = 'very celebrate';
 greetings[7] = 'so cake';
 greetings[8] = 'much age';
-greetings[9] = 'ur a v v good boye';
+greetings[9] = 'ur v v good boye';
 $(document).ready(function() {
 	var index = 0;
 	$('.message').on('click', function() {

@@ -34,11 +34,12 @@ html, body {
     padding: 10px;
     margin: 0 auto;
     border-radius:5px;
+	display:none;
     
 }
 .bubble:after,
 .bubble:before {
-	left: 60%;
+	left: 80%;
 	top: 100%;
 	border: solid white;
 	content: '';

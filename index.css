@@ -1,52 +1,59 @@
-@font-face {
-	font-family: Varela;
-	src: url(varela.ttf);
-}
 html, body {
 	margin: 0;
 	padding: 0;
+	font-family: sans-serif;
+	background-color: #fff;
+	color: #333;
+}
+.center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+.item {
+	flex: 1;
 	text-align: center;
+}
+.message {
+	padding: 10px;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 32px;
+}
+.media {
+	padding: 10px;
+	margin: 20px;
+}
+.bubble {
 	font-size: 20px;
-	font-family: Varela, sans-serif;
-	background-image: url(background-min.jpg);
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-color: #C3E1D9;
-	color: #9400D3;
+	position: relative;
+	background: white;
+	border: 1px solid black;
+    max-width: 200px;
+    padding: 10px;
+    margin: 0 auto;
+    border-radius:5px;
+    
 }
-#header {
-	margin: auto;
-	width: 100%;
+.bubble:after,
+.bubble:before {
+	left: 60%;
+	top: 100%;
+	border: solid white;
+	content: '';
+	height: 0;
+	width: 0;
 	position: absolute;
-	top: 0px;
-	z-index: 10;
-	background-color: rgba(255, 255, 255, 0.6);
+	pointer-events: none;
 }
-#message {	
-	font-size: 40px;
-	animation: blink 100ms infinite alternate;
+.bubble:after {
+	border-color: white transparent transparent white;
+	border-width: 10px;
+	margin-left: -10px;
 }
-#footer {
-	margin: auto;
-	width: 100%;
-	position: absolute;
-	bottom: 0px;
-	z-index: 10;
-	background-color: rgba(255, 255, 255, 0.6);
-}
-#instruction {
-	font-size: 12px;
-	display: block;
-}
-.hidden {
-	display: none;
-}
-@keyframes blink {
-	from {
-		color: #1B7742;
-	}
-	to {
-		color: #9400D3;
-	}
+.bubble:before {
+	border-color: black transparent transparent black;
+	border-width: 11px;
+	margin-left: -11px;
 }

@@ -36,10 +36,10 @@ html, body {
 	position: relative;
 	background: #fff;
 	border: 1px solid #666;
-    max-width: 150px;
-    padding: 5px;
-    margin: 0 auto;
-    border-radius: 5px;
+	max-width: 150px;
+	padding: 5px;
+	margin: 0 auto;
+	border-radius: 5px;
 	text-align: center;
 }
 .bubble:after,
@@ -54,12 +54,12 @@ html, body {
 	pointer-events: none;
 }
 .bubble:after {
-	border-color: #fff transparent transparent #fff;
+	border-color: #fff rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #fff;
 	border-width: 5px;
 	margin-left: -5px;
 }
 .bubble:before {
-	border-color: #666 transparent transparent #666;
+	border-color: #666 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #666;
 	border-width: 6px;
 	margin-left: -6px;
 }

@@ -17,15 +17,24 @@ for (var i = 0; i < 10; i++) {
 }
 $(document).ready(function() {
 	var index = 0;
-	$('.message').on('click', function() {
+	var message = $('.message');
+	var media = $('.media');
+	var greeting = $('#greeting');
+	var image = $('#image');
+	message.on('click', function() {
+		message.css('color', '#4cd5ab');
+		message.css('border-color', '#4cd5ab');
+		setTimeout(function() {
+			message.css('color', '#666');
+			message.css('border-color', '#666');
+		}, 100);
 		audio.currentTime = 0;
 		audio.play();
-		$('.media').fadeOut(500, function() {
-			$('#greeting').text(greetings[index]);
-			$('#image').attr('src', images[index].src);
-			$('.media').fadeIn(500);
+		media.fadeOut(500, function() {
+			greeting.text(greetings[index]);
+			image.attr('src', images[index].src);
+			media.fadeIn(500);
 			index = (index == 9) ? 0 : (index + 1);
 		});
-		$('.center').trigger('touchstart');
 	});
 });

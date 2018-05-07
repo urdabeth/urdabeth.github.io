@@ -24,10 +24,6 @@ html, body {
 	border: 1px solid #666;
 	border-radius: 5px;
 	display: inline-block;
-}
-.message:hover {
-	border-color: #4cd5ab;
-	color: #4cd5ab;
 	cursor: pointer;
 }
 .media {

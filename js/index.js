@@ -32,7 +32,6 @@ $(document).ready(function() {
 	shuffle();
 	var count = 0;
 	$('.message').on('click', function() {
-		console.log(numbers[count]);
 		$('.message').css('color', '#4cd5ab');
 		setTimeout(function() {
 			$('.message').css('color', '#666');

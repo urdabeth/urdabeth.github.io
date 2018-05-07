@@ -17,8 +17,7 @@ for (var i = 0; i < 10; i++) {
 }
 $(document).ready(function() {
 	var index = 0;
-	$('.message').on('click', function(e) {
-		e.preventDefault();
+	$('.message').on('click', function() {
 		audio.currentTime = 0;
 		audio.play();
 		$('.media').fadeOut(500, function() {
@@ -27,6 +26,6 @@ $(document).ready(function() {
 			$('.media').fadeIn(500);
 			index = (index == 9) ? 0 : (index + 1);
 		});
-		$(this).blur();
+		$('.center').trigger('click');
 	});
 });

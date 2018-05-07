@@ -30,6 +30,23 @@ html, body {
 	color: #4cd5ab;
 	cursor: pointer;
 }
+#message-button {
+	background-color: rgba(0, 0, 0, 0);
+	color: #666;
+	padding: 10px;
+	margin: 0 20px;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 28px;
+	border: 1px solid #666;
+	border-radius: 5px;
+	display: inline-block;
+}
+#message-button:hover, :active, :focus {
+	border-color: #4cd5ab;
+	color: #4cd5ab;
+	cursor: pointer;
+}
 .media {
 	padding: 10px;
 	margin: 20px;

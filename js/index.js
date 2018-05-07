@@ -26,5 +26,6 @@ $(document).ready(function() {
 			$('.media').fadeIn(500);
 			index = (index == 9) ? 0 : (index + 1);
 		});
+		$('.center').trigger('touchstart');
 	});
 });

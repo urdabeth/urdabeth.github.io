@@ -17,7 +17,8 @@ for (var i = 0; i < 10; i++) {
 }
 $(document).ready(function() {
 	var index = 0;
-	$('.message').on('click', function() {
+	$('.message').on('click', function(e) {
+		e.preventDefault();
 		audio.currentTime = 0;
 		audio.play();
 		$('.media').fadeOut(500, function() {

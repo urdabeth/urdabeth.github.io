@@ -42,7 +42,7 @@ $(document).ready(function() {
 		audio.play();
 		$('.media').slideToggle(300, function() {
 			$('#greeting').text(greetings[numbers[count]]);
-			$('#image').attr('src', images[numbers[count]].src);
+			$('#image').attr('src', images[9 - (numbers[count])].src);
 			$('.media').slideToggle(300);
 		});
 		if (count == 9) {

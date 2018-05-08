@@ -40,10 +40,10 @@ $(document).ready(function() {
 		}, 100);
 		audio.currentTime = 0;
 		audio.play();
-		$('.media').slideToggle(500, function() {
+		$('.media').slideToggle(300, function() {
 			$('#greeting').text(greetings[numbers[count]]);
 			$('#image').attr('src', images[numbers[count]].src);
-			$('.media').slideToggle(500);
+			$('.media').slideToggle(300);
 		});
 		if (count == 9) {
 			count = 0;

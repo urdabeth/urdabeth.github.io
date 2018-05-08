@@ -38,10 +38,10 @@ $(document).ready(function() {
 		}, 100);
 		audio.currentTime = 0;
 		audio.play();
-		$('.media').fadeOut(500, function() {
+		$('.media').slideToggle(500, function() {
 			$('#greeting').text(greetings[numbers[count]]);
 			$('#image').attr('src', images[numbers[count]].src);
-			$('.media').fadeIn(500);
+			$('.media').slideToggle(500);
 		});
 		if (count == 9) {
 			count = 0;

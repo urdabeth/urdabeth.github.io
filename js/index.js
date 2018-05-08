@@ -33,8 +33,10 @@ $(document).ready(function() {
 	var count = 0;
 	$('.message').on('click', function() {
 		$('.message').css('color', '#4cd5ab');
+		$('.message').css('border-color', '#4cd5ab');
 		setTimeout(function() {
 			$('.message').css('color', '#666');
+			$('.message').css('border-color', '#666');
 		}, 100);
 		audio.currentTime = 0;
 		audio.play();

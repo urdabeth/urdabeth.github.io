@@ -21,11 +21,11 @@ html, body {
 	text-transform: uppercase;
 	font-weight: 700;
 	font-size: 28px;
-	border: 0px solid #666;
+	border: 1px solid #666;
 	border-radius: 5px;
 	display: inline-block;
 	cursor: pointer;
-	box-shadow: 0px 0px 3px #666;
+	/*box-shadow: 0px 0px 3px #666;*/
 }
 .media {
 	padding: 10px;
@@ -35,12 +35,13 @@ html, body {
 	font-size: 20px;
 	position: relative;
 	background: #fff;
-	border: 1px solid #666;
+	border: 1px solid #4cd5ab;
 	max-width: 160px;
 	padding: 5px;
 	margin: 0 auto;
 	border-radius: 5px;
 	text-align: center;
+	color: #4cd5ab;
 }
 .bubble:after,
 .bubble:before {
@@ -59,7 +60,7 @@ html, body {
 	margin-left: -5px;
 }
 .bubble:before {
-	border-color: #666 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #666;
+	border-color: #4cd5ab rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #4cd5ab;
 	border-width: 6px;
 	margin-left: -6px;
 }

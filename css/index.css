@@ -64,3 +64,6 @@ html, body {
 	border-width: 6px;
 	margin-left: -6px;
 }
+footer a {
+	color: #fff;
+}

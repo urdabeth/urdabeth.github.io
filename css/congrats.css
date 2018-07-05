@@ -32,7 +32,7 @@ p {
 img {
     z-index: -10;
     position: absolute;
-    opacity: 0.3;
+    opacity: 0.6;
     filter: grayscale(100%) saturate(1000%) sepia(1000%) hue-rotate(10deg);
 }
 @keyframes Gradient {

@@ -27,6 +27,7 @@ h1 {
     font-size: 12vmax;
     text-shadow: -3px 0px 0px #f5ab99, -6px 0px 0px #351c4d;
     z-index: 10;
+    line-height: 12vmax;
 }
 img {
     z-index: -10;

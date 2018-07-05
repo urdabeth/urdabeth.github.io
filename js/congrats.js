@@ -22,7 +22,7 @@ function setImages() {
             img.style.left = left;
             img.style.transform = rotate;
 
-            document.getElementById("body").appendChild(img);
+            document.body.appendChild(img);
         }
     }, 500);
 }
@@ -41,7 +41,7 @@ function removeImages() {
 }
 
 window.onload = function() {
-    document.getElementById("body").addEventListener("click", function() {
+    document.body.addEventListener("click", function() {
         if (set) {
             setImages();
         } else {

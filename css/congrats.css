@@ -14,8 +14,7 @@ body {
     color: #fff;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-content: center;
+    justify-content: end;
     background: linear-gradient(30deg, #feb47b, #ff7e5f, #765285);
     background-size: 300% 300%;
     animation: Gradient 1s ease infinite alternate;
@@ -23,11 +22,12 @@ body {
 }
 h1 {
     text-transform: uppercase;
-    text-align: center;
+    text-align: left;
     font-size: 12vmax;
+    line-height: 12vmax;
+    padding: 10vw;
     text-shadow: 3px 0px 0px #f5ab99, -3px 0px 0px #351c4d;
     z-index: 10;
-    line-height: 12vmax;
 }
 img {
     z-index: -10;

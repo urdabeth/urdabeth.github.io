@@ -24,7 +24,7 @@ function setImages() {
 
             document.body.appendChild(img);
         }
-    }, 500);
+    }, 100);
 }
 
 function removeImages() {

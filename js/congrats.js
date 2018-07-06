@@ -1,91 +1,56 @@
-var interval = null;
-var set = true;
-var count = 0;
-
-function setImages() {
-    set = false;
-
-    interval = setInterval(function() {
-        count++;
-
-        if (count > 50) {
-            clearInterval(interval);
-        } else {
-            let top = (Math.floor(Math.random() * window.innerHeight) - 50) + "px";
-            let left = (Math.floor(Math.random() * window.innerWidth) - 50) + "px";
-            let rotate = "rotate(" + (Math.floor(Math.random() * 360)) + "deg)";
-
-            let img = document.createElement("img");
-            img.src = "assets/images/icon.png";
-            img.id = "image" + count;
-            img.style.top = top;
-            img.style.left = left;
-            img.style.transform = rotate;
-
-            document.body.appendChild(img);
-        }
-    }, 100);
-}
-
-function removeImages() {
-    set = true;
-    count = 0;
-    clearInterval(interval);
-
-    let images = document.getElementsByTagName("img");
-    while (images.length > 0) {
-        let id = images[images.length - 1].id;
-        let image =  document.getElementById(id);
-        image.parentNode.removeChild(image);
-    }
+window.onload = function() {
+    startBounce();
 }
 
 function startBounce() {
     var bounce = document.getElementById("bounce");
-    var height = window.innerHeight;
-    console.log(height);
-    var width = window.innerWidth;
-    var y = 0;
-    var yDown = true;
-    var x = 0;
-    var xRight = true;
-    var interval = setInterval(function() {
-        bounce.style.top = y + "px";
-        bounce.style.left = x + "px";
 
-        if (y == 0) {
-            yDown = true;
-        } else if (y == height - 100) {
-            yDown = false;
+    const xMin = -10;
+    const yMin = -10;
+
+    const xMax = window.innerWidth - bounce.width - xMin;
+    const yMax = window.innerHeight - bounce.height - yMin;
+
+    let xPosition = 0;
+    let yPosition = 0;
+
+    let xIncrease = true;
+    let yIncrease = true;
+
+    let rAngle = 0;
+    let rDirection = true;
+
+    setInterval(function() {
+        bounce.style.left = xPosition + "px";
+        bounce.style.top = yPosition + "px";
+        bounce.style.transform = "rotate(" + rAngle + "deg)";
+
+        if ((xPosition == xMin) || (xPosition == xMax)) {
+            xIncrease = !xIncrease;
+            rDirection = !rDirection;
         }
 
-        if (yDown) {
-            y++;
+        if ((yPosition == yMin) || (yPosition == yMax)) {
+            yIncrease = !yIncrease;
+            rDirection = !rDirection;
+        }
+
+        if (xIncrease) {
+            xPosition++;
         } else {
-            y--;
+            xPosition--;
         }
 
-        if (x == 0) {
-            xRight = true;
-        } else if (x == width - 100){
-            xRight = false;
-        }
-
-        if (xRight) {
-            x++;
+        if (yIncrease) {
+            yPosition++;
         } else {
-            x--;
+            yPosition--;
+        }
+
+        if (rDirection) {
+            rAngle++;
+        } else {
+            rAngle--;
         }
     }, 10);
-}
-
-window.onload = function() {
-    // document.body.addEventListener("click", function() {
-    //     if (set) {
-    //         setImages();
-    //     } else {
-    //         removeImages();
-    //     }
-    // });
-    startBounce();
 }

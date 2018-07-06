@@ -8,21 +8,26 @@
     <script>
     window.onload = function() {
         var bounce = document.getElementById("bounce");
-        console.log(bounce);
+
         var height = window.innerHeight;
-        console.log(height);
-        var width = window.innerWidth;
+        var divHeight = 100;
         var y = 0;
         var yDown = true;
+        var yMax = 100 - (Math.floor((divHeight / height) * 100));
+
+        var width = window.innerWidth;
+        var divWidth = 100;
         var x = 0;
         var xRight = true;
+        var xMax = 100 - (Math.floor((divWidth / width) * 100));
+
         var interval = setInterval(function() {
-            bounce.style.top = y + "px";
-            bounce.style.left = x + "px";
+            bounce.style.top = y + "%";
+            bounce.style.left = x + "%";
 
             if (y == 0) {
                 yDown = true;
-            } else if (y == height - 100) {
+            } else if (y == yMax) {
                 yDown = false;
             }
 
@@ -34,7 +39,7 @@
 
             if (x == 0) {
                 xRight = true;
-            } else if (x == width - 100){
+            } else if (x == xMax){
                 xRight = false;
             }
 
@@ -43,7 +48,7 @@
             } else {
                 x--;
             }
-        }, 1);
+        }, 50);
     }
     </script>
     <style>

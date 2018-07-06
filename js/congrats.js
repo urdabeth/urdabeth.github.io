@@ -6,15 +6,13 @@ function startBounce() {
     var bounce = document.getElementById("bounce");
 
     const xMin = -10;
-    const yMin = -10;
-
-    const xMax = window.innerWidth - bounce.width - xMin;
-    const yMax = window.innerHeight - bounce.height - yMin;
-
+    let xMax = 0;
     let xPosition = 0;
-    let yPosition = 0;
-
     let xIncrease = true;
+
+    const yMin = -10;
+    let yMax = 0;
+    let yPosition = 0;
     let yIncrease = true;
 
     let rAngle = 0;
@@ -24,6 +22,17 @@ function startBounce() {
         bounce.style.left = xPosition + "px";
         bounce.style.top = yPosition + "px";
         bounce.style.transform = "rotate(" + rAngle + "deg)";
+
+        xMax = window.innerWidth - bounce.width - xMin;
+        yMax = window.innerHeight - bounce.height - yMin;
+
+        if (xPosition > window.innerWidth) {
+            xPosition = 0;
+        }
+
+        if (yPosition > window.innerHeight) {
+            yPosition = 0;
+        }
 
         if ((xPosition == xMin) || (xPosition == xMax)) {
             xIncrease = !xIncrease;

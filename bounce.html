@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    window.onload = function() {
+        var bounce = document.getElementById("bounce");
+        console.log(bounce);
+        var height = window.innerHeight;
+        console.log(height);
+        var width = window.innerWidth;
+        var y = 0;
+        var yDown = true;
+        var x = 0;
+        var xRight = true;
+        var interval = setInterval(function() {
+            bounce.style.top = y + "px";
+            bounce.style.left = x + "px";
+
+            if (y == 0) {
+                yDown = true;
+            } else if (y == height - 100) {
+                yDown = false;
+            }
+
+            if (yDown) {
+                y++;
+            } else {
+                y--;
+            }
+
+            if (x == 0) {
+                xRight = true;
+            } else if (x == width - 100){
+                xRight = false;
+            }
+
+            if (xRight) {
+                x++;
+            } else {
+                x--;
+            }
+        }, 1);
+    }
+    </script>
+    <style>
+    #bounce {
+        height: 100px;
+        width: 100px;
+        background-color: grey;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    </style>
+</head>
+<body>
+    <div id="bounce"></div>
+</body>
+</html>

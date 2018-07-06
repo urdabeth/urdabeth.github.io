@@ -40,12 +40,52 @@ function removeImages() {
     }
 }
 
-window.onload = function() {
-    document.body.addEventListener("click", function() {
-        if (set) {
-            setImages();
-        } else {
-            removeImages();
+function startBounce() {
+    var bounce = document.getElementById("bounce");
+    var height = window.innerHeight;
+    console.log(height);
+    var width = window.innerWidth;
+    var y = 0;
+    var yDown = true;
+    var x = 0;
+    var xRight = true;
+    var interval = setInterval(function() {
+        bounce.style.top = y + "px";
+        bounce.style.left = x + "px";
+
+        if (y == 0) {
+            yDown = true;
+        } else if (y == height - 100) {
+            yDown = false;
         }
-    });
+
+        if (yDown) {
+            y++;
+        } else {
+            y--;
+        }
+
+        if (x == 0) {
+            xRight = true;
+        } else if (x == width - 100){
+            xRight = false;
+        }
+
+        if (xRight) {
+            x++;
+        } else {
+            x--;
+        }
+    }, 10);
+}
+
+window.onload = function() {
+    // document.body.addEventListener("click", function() {
+    //     if (set) {
+    //         setImages();
+    //     } else {
+    //         removeImages();
+    //     }
+    // });
+    startBounce();
 }

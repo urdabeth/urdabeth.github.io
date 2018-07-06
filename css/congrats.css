@@ -29,12 +29,12 @@ p {
     text-shadow: 3px 0px 0px #f5ab99, -3px 0px 0px #351c4d;
     z-index: 10;
 }
-img {
+/* img {
     z-index: -10;
     position: absolute;
     opacity: 0.6;
     filter: grayscale(100%) saturate(1000%) sepia(1000%) hue-rotate(10deg);
-}
+} */
 @keyframes Gradient {
     0% {
 		background-position: 0% 50%
@@ -42,4 +42,20 @@ img {
 	100% {
 		background-position: 100% 0%
 	}
+}
+/* #bounce {
+    height: 100px;
+    width: 100px;
+    background-color: grey;
+    position: absolute;
+    top: 0;
+    left: 0;
+} */
+
+img {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
 }

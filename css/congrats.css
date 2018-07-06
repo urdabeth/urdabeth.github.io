@@ -33,7 +33,7 @@ p {
     z-index: -1;
 }
 .last {
-    padding: 0 8vmin 8vmin;
+    padding-bottom: 8vmin;
 }
 img {
     height: 50vmin;
@@ -41,7 +41,6 @@ img {
     position: absolute;
     top: 0;
     left: 0;
-    /* filter: brightness(0); */
 }
 @keyframes Gradient {
     0% {

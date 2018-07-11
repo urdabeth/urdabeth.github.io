@@ -14,7 +14,7 @@ body {
     color: #fff;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     background: linear-gradient(30deg, #feb47b, #ff7e5f, #765285);
     background-size: 300% 300%;
     animation: Gradient 1s ease infinite alternate;
